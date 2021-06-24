@@ -75,11 +75,6 @@ displayed if the 'eventbrite' field in the header is not set.
 </iframe>
 {% endif %}
 
-<h2>Registration</h2>
-<p>Please use the <a href="https://www.archer2.ac.uk/training/register/?course=210621-software-carpentry/">ARCHER2 course registration form</a> to sign up for the workshop.</p>
-
-<hr/>
-
 <h2 id="general">General Information</h2>
 
 {% comment %}
@@ -308,23 +303,11 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "pilot" %}
-<p><a href="{{ site.pilot_pre_survey }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.pilot_post_survey }}">Post-workshop Survey</a></p>
-{% elsif site.pilot_pre_survey or site.pilot_post_survey %}
-<div class="alert alert-danger">
-WARNING: you have defined custom pre- and/or post-survey links for
-a workshop not configured as a lesson pilot
-(the value of `site` is not set to `pilot` in `_config.yml`).
-Please comment out the `pilot_pre_survey` and `pilot_post_survey` fields
-in `_config.yml` or, if this workshop is a lesson pilot,
-change the value of `carpentry` to `pilot`.
-</div>
-{% else %}
+<p>Please be sure to complete these surveys <strong>before</strong> the workshop:</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p>Please be sure to complete these surveys <strong>after</strong> the workshop:</p>
+<p><a href="https://www.archer2.ac.uk/training/feedback/?course=210621-software-carpentry">ARCHER2 course feedback</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% endif %}
 
 <hr/>
 
